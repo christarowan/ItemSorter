@@ -23,10 +23,10 @@ public class SortByIdTest {
         Item[] itemsToSort = {item2, item1, item3};
         Item[] expected = {item3, item2, item1};
         ItemSorter itemSorter = new ItemSorter(itemsToSort);
-        Comparator<Item> comparator = (Comparator<Item>) new IdComparator();
+        Comparator<Item> toadstool = (Comparator<Item>) new IdComparator();
 
         // when
-        Item[] actual = itemSorter.sort(comparator);
+        Item[] actual = itemSorter.sort(toadstool);
 
         // then
         Assert.assertArrayEquals(expected, actual);
